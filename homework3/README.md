@@ -17,7 +17,7 @@ FROM generate_series(1, 1000000);
  pg_total_relation_size
 ------------------------
                68329472
-```c
+```
 3. 5 раз обновить все строчки и добавить к каждой строчке любой символ
 ```console
 UPDATE my_table SET text_field = text_field || 'a';
@@ -68,6 +68,7 @@ BEGIN
     END LOOP;
 END;
 $$ LANGUAGE plpgsql;
+select update_text_field_random();
 ```
 7. Посмотреть размер файла с таблицей
 ```console
