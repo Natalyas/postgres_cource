@@ -80,6 +80,7 @@ select pg_total_relation_size('my_table');
 8. Отключить Автовакуум на конкретной таблице
 ```console
 ALTER TABLE my_table SET (autovacuum_enabled = false);
+```
 9. 10 раз обновить все строчки и добавить к каждой строчке любой символ
 ```console
 CREATE OR REPLACE FUNCTION update_text_field_random()
